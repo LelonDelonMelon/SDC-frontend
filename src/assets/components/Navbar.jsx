@@ -11,9 +11,9 @@ const Navbar = () => {
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                      <a href="" className="flex items-center">
+                      <a href="/" className="flex items-center">
                           <img src={SDCLogo} className="h-6 mr-3 sm:h-9" alt="SDC Logo" />
-                          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Secure Donation Chain</span>
+                          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-black">Secure Donation Chain</span>
 
                         </a>
                         <div className="md:hidden">
@@ -62,16 +62,16 @@ const Navbar = () => {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-gray-600 hover:text-blue-600">
-                                <a href="javascript:void(0)">Login</a>
+                                <a href="login">Login</a>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                                <a href="javascript:void(0)">Register</a>
+                                <a href="register">Register</a>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                                <a href="javascript:void(0)">Campaigns</a>
+                                <a href="campaign">Campaigns</a>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                              <a href="javascript:void(0)">Profile</a>
+                              <a href="profile">Profile</a>
                             </li>
                         </ul>
                     </div>

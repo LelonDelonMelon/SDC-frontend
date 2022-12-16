@@ -26,7 +26,7 @@ const Profile = () => {
             <Navbar/>
         <ul>
             {
-                users.map((user,index)=> <li key={index}>{user.password}</li>)
+                users.map((user,index)=> <li key={index}>{user.fullName}</li>)
             }
         </ul>
 

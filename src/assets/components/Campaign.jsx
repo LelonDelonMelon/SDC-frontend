@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import User from './User';
-
+import Navbar from './Navbar';
 const Campaign = () => {
 
     const [campaigns, setCampaigns] = useState([]);
@@ -18,6 +18,7 @@ const Campaign = () => {
     },[])
   return (
     <div>
+        <Navbar/>
         <ul>
             {
             campaigns.map((campaign, index)=>
