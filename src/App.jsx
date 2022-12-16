@@ -1,32 +1,23 @@
-import User from './assets/components/User'
-import Campaign from './assets/components/Campaign'
-import Navbar from './assets/components/Navbar'
+import React, { useState } from "react";
+import './App.css';
 import './index.css'
+import { Login } from "./assets/components/Login";
+import { Register } from "./assets/components/Register";
 
 function App() {
- 
-/*
+  const [currentForm, setCurrentForm] = useState('login');
 
-Users
-      <div className="User">
-    <User/>
-    Campaigns
-      <Campaign/>
-      </div>
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
 
-
-    <div className="App bg-slate-700">
-      <Navbar></Navbar>
-    </div>
-
-*/
   return (
-      <div>
-       <div className="App bg-slate-700">
-      <Navbar></Navbar>
-      </div>
-      </div>    
-  )
+    <div className="App">
+      {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+      }
+    </div>
+  );
 }
 
-export default App
+export default App;
