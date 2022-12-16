@@ -1,18 +1,31 @@
-import './App.css'
 import User from './assets/components/User'
 import Campaign from './assets/components/Campaign'
+import Navbar from './assets/components/Navbar'
+import './index.css'
+
 function App() {
  
+/*
 
-  return (
-    <div className="App">
-      Users
+Users
       <div className="User">
     <User/>
     Campaigns
       <Campaign/>
       </div>
+
+
+    <div className="App bg-slate-700">
+      <Navbar></Navbar>
     </div>
+
+*/
+  return (
+      <div>
+       <div className="App bg-slate-700">
+      <Navbar></Navbar>
+      </div>
+      </div>    
   )
 }
 

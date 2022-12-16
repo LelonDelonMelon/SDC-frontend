@@ -6,9 +6,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Navbar from './assets/components/Navbar';
+import User from './assets/components/User';
+import Profile from './assets/components/Profile';
+import Campaign from './assets/components/Campaign';
 
-import './index.css'
-import Hello from './routes/Hello';
 // const router = createBrowserRouter([
 //   {
 //     path:"/",
@@ -18,9 +20,22 @@ import Hello from './routes/Hello';
 
 //<RouterProvider router={router}/>
 
-
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navbar/>,
+  },
+  {
+    path: "/profile",
+    element: <Profile/>,
+  },
+  {
+    path: "/campaign",
+    element: <Campaign/>,
+  }
+])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <App />    
+      <RouterProvider router={router}></RouterProvider>    
   </React.StrictMode>,
 )
