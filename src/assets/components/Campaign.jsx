@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import User from './User';
 import Navbar from './Navbar';
+import CreateCampaign from './CreateCampaignButton';
 const Campaign = () => {
 
     const [campaigns, setCampaigns] = useState([]);
@@ -19,11 +19,13 @@ const Campaign = () => {
   return (
     <div>
         <Navbar/>
+        <CreateCampaign/>
         <ul>
             {
             campaigns.map((campaign, index)=>
             <li key={index}>
-                {campaign.campaignDescription}
+                Description:{campaign.campaignDescription}
+                Goal Amount:{campaign.campaignGoalAmount}
             </li>)
             }
         </ul>

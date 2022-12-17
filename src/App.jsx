@@ -3,6 +3,8 @@ import './App.css';
 import './index.css'
 import { Login } from "./assets/components/Login";
 import { Register } from "./assets/components/Register";
+import 'flowbite'
+import 'flowbite-react'
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
