@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from './Navbar'
 import ParticlesBg from "particles-bg";
-
+import { Link } from "react-router-dom";
 export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
