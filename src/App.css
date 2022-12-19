@@ -2,14 +2,21 @@
 .App {
     text-align: center;
     display: flex;
-    min-height: 80vh;
+    min-height: 89vh;
     align-items: center;
     justify-content: center;
     color: rgb(240, 232, 240);
     /* background-image: url(./assets/cryptocurrency-concept-with-coin.jpg); */
   }
+  .App1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(250, 250, 250);
+    background-image: linear-gradient(50deg, #3c7ef8 0%, #f88808 100%);
+  }
   
-  .auth-form-container, .login-form, .register-form {
+  .auth-form-container, .login-form, .register-form, .campaign-form{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -51,3 +58,36 @@
     color: white;
     text-decoration: underline;
   }
+
+  .carousel {
+    overflow: hidden;
+  }
+  
+  .inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }
+  
+  .carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: blue;
+    color: #fff;
+  }
+  
+  .indicators {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .indicators > button {
+    margin: 5px;
+  }
+  
+  .indicators > button.active {
+    background-color: rgb(60, 60, 223);
+    color: #fff;
+  }
+  
