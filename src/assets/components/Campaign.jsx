@@ -47,41 +47,41 @@ const Campaign = () => {
         </ul> */}
             <div class="App">
                 <div className="auth-form-container">
-                    <h2 class="black font-bold text-2xl text-cyan-700" >Create Campaign</h2>
+                    <h2 class="black font-bold text-2xl text-teal-400" >Create Campaign</h2>
                     <div className="row">
                         <div className="columns contact-details">
                             <form className="campaign-form" onSubmit={handleSubmit}>
-                                <label className="font-bold text-cyan-700">Campaign Name:
+                                <label className="font-bold text-teal-400">Campaign Name:
                                     <br></br>
                                     <input
                                         value={campaignName} onChange={(e) => setcampaignName(e.target.value)}
                                         id="campaignName"
-                                        class="bg-slate-400 block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-cyan-500 
-                                        focus:border-cyan-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                                        class="bg-slate-400 block w-full p-2 text-teal-900 border border-teal-300 rounded-lg bg-teal-50 sm:text-xs focus:ring-cyan-500 
+                                        focus:border-cyan-500 dark:bg-teal-700 dark:border-teal-400 dark:placeholder-teal-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                                         type="text"
                                     />
                                 </label>
-                                <label className="font-bold text-cyan-700">Campaign Description:
+                                <label className="font-bold text-teal-400">Campaign Description:
                                     <br></br>
                                     <input
                                         value={campaignDescription} onChange={(e) => setcampaignDescription(e.target.value)}
                                         id="campaignDescription"
-                                        class="bg-slate-400 block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-cyan-500 
-                                        focus:border-cyan-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                                        class="bg-slate-400 block w-full p-2 text-teal-900 border border-teal-300 rounded-lg bg-teal-50 sm:text-xs focus:ring-cyan-500 
+                                        focus:border-cyan-500 dark:bg-teal-700 dark:border-teal-400 dark:placeholder-teal-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                                         type="text"
                                     />
                                 </label>
-                                <label className="font-bold text-cyan-700">Target Amount:
+                                <label className="font-bold text-teal-400">Target Amount:
                                     <br></br>
                                     <input
                                         value={targetAmount} onChange={(e) => settargetAmount(e.target.value)}
                                         id="targetAmount"
-                                        class="bg-slate-400 block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-cyan-500 
-                                        focus:border-cyan-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                                        class="bg-slate-400 block w-full p-2 text-teal-900 border border-teal-300 rounded-lg bg-teal-50 sm:text-xs focus:ring-cyan-500 
+                                        focus:border-cyan-500 dark:bg-teal-700 dark:border-teal-400 dark:placeholder-teal-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                                         type="text"
                                     />
                                 </label>
-                                <label className="font-bold text-cyan-700">Campaign Photo:
+                                <label className="font-bold text-teal-400">Campaign Photo:
                                     <br></br>
                                     <input
                                         class=" bg-slate-400
@@ -92,19 +92,19 @@ const Campaign = () => {
                                         py-1.5
                                         text-base
                                         font-normal
-                                        text-gray-700
-                                        bg-gray-100 bg-clip-padding
-                                        border border-solid border-gray-300
+                                        text-teal-700
+                                        bg-teal-100 bg-clip-padding
+                                        border border-solid border-teal-300
                                         rounded
                                         transition
                                         ease-in-out
                                         m-0
-                                        focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none"
+                                        focus:text-teal-700 focus:bg-white focus:border-cyan-400 focus:outline-none"
                                         aria-describedby="file_input_help" id="file_input" type="file"
                                     />
                                 </label>
                                 <br></br>
-                                <button class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 
+                                <button class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-400 hover:bg-gradient-to-br focus:ring-4 
                                 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                                     id="button" type="submit">
                                     Submit
@@ -119,7 +119,7 @@ const Campaign = () => {
             <br></br>
             <div class="App1">
                 <div className="auth-form-container">
-                    <h2 class="text-center font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">Trending Campaigns</h2>
+                    <h2 class="text-center font-medium leading-tight text-4xl mt-0 mb-2 text-teal-400">Trending Campaigns</h2>
                     <br></br>
                     <div class="row">
                         <Carousel>
