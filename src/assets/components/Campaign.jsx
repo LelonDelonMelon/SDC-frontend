@@ -36,7 +36,7 @@ const Campaign = () => {
     return (
         <div>
             <Navbar />
-            <ParticlesBg type="circle" bg={true} />
+            <ParticlesBg num={100} type="cobweb" bg={true} />
             {/* <ul>
             {
             campaigns.map((campaign, index)=>
@@ -47,11 +47,11 @@ const Campaign = () => {
         </ul> */}
             <div class="App">
                 <div className="auth-form-container">
-                    <h2 class="black font-bold text-2xl text-teal-400" >Create Campaign</h2>
+                    <h2 class="black font-bold text-2xl text-slate-50" >Create Campaign</h2>
                     <div className="row">
                         <div className="columns contact-details">
                             <form className="campaign-form" onSubmit={handleSubmit}>
-                                <label className="font-bold text-teal-400">Campaign Name:
+                                <label className="font-bold text-slate-50">Campaign Name:
                                     <br></br>
                                     <input
                                         value={campaignName} onChange={(e) => setcampaignName(e.target.value)}
@@ -61,7 +61,7 @@ const Campaign = () => {
                                         type="text"
                                     />
                                 </label>
-                                <label className="font-bold text-teal-400">Campaign Description:
+                                <label className="font-bold text-slate-50">Campaign Description:
                                     <br></br>
                                     <input
                                         value={campaignDescription} onChange={(e) => setcampaignDescription(e.target.value)}
@@ -71,7 +71,7 @@ const Campaign = () => {
                                         type="text"
                                     />
                                 </label>
-                                <label className="font-bold text-teal-400">Target Amount:
+                                <label className="font-bold text-slate-50">Target Amount:
                                     <br></br>
                                     <input
                                         value={targetAmount} onChange={(e) => settargetAmount(e.target.value)}
@@ -81,7 +81,7 @@ const Campaign = () => {
                                         type="text"
                                     />
                                 </label>
-                                <label className="font-bold text-teal-400">Campaign Photo:
+                                <label className="font-bold text-slate-50">Campaign Photo:
                                     <br></br>
                                     <input
                                         class=" bg-slate-400
@@ -93,7 +93,7 @@ const Campaign = () => {
                                         text-base
                                         font-normal
                                         text-teal-700
-                                        bg-teal-100 bg-clip-padding
+                                        bg-slate-100 bg-clip-padding
                                         border border-solid border-teal-300
                                         rounded
                                         transition
@@ -104,8 +104,8 @@ const Campaign = () => {
                                     />
                                 </label>
                                 <br></br>
-                                <button class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-400 hover:bg-gradient-to-br focus:ring-4 
-                                focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                                <button class="text-white bg-gradient-to-r from-blue-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none 
+            focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                                     id="button" type="submit">
                                     Submit
                                 </button>
@@ -117,9 +117,10 @@ const Campaign = () => {
                 </div>
             </div>
             <br></br>
+            <hr class="h-px bg-green-200 border-0 dark:bg-gray-700"></hr>    
             <div class="App1">
                 <div className="auth-form-container">
-                    <h2 class="text-center font-medium leading-tight text-4xl mt-0 mb-2 text-teal-400">Trending Campaigns</h2>
+                    <h2 class="text-center font-medium leading-tight text-4xl mt-0 mb-2 text-slate-50">Trending Campaigns</h2>
                     <br></br>
                     <div class="row">
                         <Carousel>

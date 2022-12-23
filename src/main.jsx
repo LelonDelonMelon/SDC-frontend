@@ -13,6 +13,8 @@ import Campaign from './assets/components/Campaign';
 import Register from './assets/components/Register';
 import Login from './assets/components/Login';
 import Home from './assets/components/Home';
+import Wallet from './assets/components/Wallet';
+
 
 // const router = createBrowserRouter([
 //   {
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <Profile/>,
+    element: <Wallet/>,
   },
   {
     path: "/campaign",
