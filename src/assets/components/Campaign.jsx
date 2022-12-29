@@ -5,29 +5,52 @@ import Navbar from './Navbar';
 import ParticlesBg from "particles-bg";
 import Carousel, { CarouselItem } from "./Carousel";
 import Slider from "react-slick";
+import { redirect } from 'react-router-dom';
 
 const Campaign = () => {
 
     const [campaignName, setcampaignName] = useState('');
     const [campaignDescription, setcampaignDescription] = useState('');
     const [targetAmount, settargetAmount] = useState('');
+    const [image, setImage] = useState('');
 
     const [campaigns, setCampaigns] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/campaign')
-            .then(res => {
-                console.log(res.data)
-                setCampaigns(res.data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
+        if (campaigns) {
+            axios.get('http://localhost:3000/api/campaign')
+                .then(res => {
+                    console.log(res.data)
+                    setCampaigns(res.data)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+
+        }
     }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(campaignName);
+        const data = {
+            campaignName: campaignName,
+            ownerAddress: "",
+            campaignDescription: campaignDescription,
+            campaignGoalAmount: targetAmount,
+            campaignPicture: image
+        }
+        try {
+            (async function post() {
+                const result = await axios.post('http://localhost:3000/api/campaign', data, { headers: { 'Content-Type': 'application/json' } })
+                console.log(result.data);
+                setcampaignName(data.campaignName)
+                setImage(data.image)
+            })()
+
+        } catch (error) {
+            console.log(error);
+        }
+        //        console.log(campaignName,campaignDescription, targetAmount, image);
     }
 
 
@@ -100,7 +123,7 @@ const Campaign = () => {
                                         ease-in-out
                                         m-0
                                         focus:text-teal-700 focus:bg-white focus:border-cyan-400 focus:outline-none"
-                                        aria-describedby="file_input_help" id="file_input" type="file"
+                                        aria-describedby="file_input_help" id="file_input" type="file" accept="image/*" onChange={e => setImage(e.target.files[0])}
                                     />
                                 </label>
                                 <br></br>
@@ -117,16 +140,33 @@ const Campaign = () => {
                 </div>
             </div>
             <br></br>
-            <hr class="h-px bg-green-200 border-0 dark:bg-gray-700"></hr>    
+
+            <hr class="h-px bg-green-200 border-0 dark:bg-gray-700"></hr>
             <div class="App1">
                 <div className="auth-form-container">
                     <h2 class="text-center font-medium leading-tight text-4xl mt-0 mb-2 text-slate-50">Trending Campaigns</h2>
                     <br></br>
                     <div class="row">
+                        
+                         {campaigns.map((campaign, index) => 
+                            <div>
+                                <img src={'https://localhost:3000/api/campaigns/images'} alt="" />
+
+                            </div>)
+                         }
+                      
                         <Carousel>
-                            <CarouselItem>Campaign1</CarouselItem>
-                            <CarouselItem>Campaign2</CarouselItem>
-                            <CarouselItem>Campaign3</CarouselItem>
+                            {
+                                campaigns.map((campaign, index) =>
+                                    <CarouselItem key={index}>
+                                        Campaign Description: {campaign.campaignDescription}
+                                        <br />
+                                        Campaign Goal Amount: {campaign.campaignGoalAmount}
+                                        <br />
+                                        Campaign Owner: {campaign.ownerAddress}
+                                        <br />
+                                    </CarouselItem>)
+                            }
                         </Carousel>
                     </div>
                 </div>
